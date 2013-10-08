@@ -1,0 +1,15 @@
+<%#= form_for (@post, :html => { :class => 'post-edit-form'}) do |f| %>
+  <%#= f.text_area :content%>
+<%# end %>
+<%= render 'posts/suggestion_bar'%>
+
+
+<div class='col-md-8 edit-area'>
+  <%= form_for(@post, :remote=>true, :html=>{:'data-type'=>'json'}) do |f| %>
+    <%= f.text_area :content, :rows=>8, :cols=>80, :id=>'edit_area'%>
+  <% end %>
+  <div class='language-detection' class="gt-spell-correct-message">
+    Language: <span id='language_type'></span>
+  </div>
+</div>
+

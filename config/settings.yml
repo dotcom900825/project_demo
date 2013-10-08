@@ -1,0 +1,17 @@
+default: &default
+
+  site_domain_www: www.site.com
+  site_domain: site.com
+  site_name: Writtings
+  google_translate_key: AIzaSyArixtoXf1D6RDZgSiZ4jDVmn1rugPIzXI
+development:
+  <<: *default
+
+
+
+production:
+  <<: *default
+
+
+test:
+  <<: *default

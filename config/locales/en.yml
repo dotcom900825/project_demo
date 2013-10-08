@@ -1,0 +1,21 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  site:
+    title: Writting
+    description: Best Writting tool for academia
+    keywords: writting
+  home:
+    desc: A quiet writting space
+    desc_more: Let you focus on your thinking instead of the tool
+
+  footer:
+    blog: Blog
+    help: Help
+    contact: Contact
+    twitter: Twitter
+
+  admin:
+    login: Login
+    signup: Sign up

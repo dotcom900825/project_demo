@@ -1,0 +1,15 @@
+<div class="home-header">
+  <div class="home-container">
+    <%= link_to 'Writings', root_path, :class=>'logo'%>
+    <nav>
+      <ul>
+        <li>
+          <%= link_to t('admin.login'), new_session_path%>
+        </li>
+        <li>
+          <%= link_to t('admin.signup'), new_user_path%>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

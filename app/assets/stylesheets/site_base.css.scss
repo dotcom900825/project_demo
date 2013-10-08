@@ -1,0 +1,44 @@
+@import "bourbon";
+@import "variables";
+
+
+body{
+  color: #333;
+  font-size: 14px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 20px;
+}
+
+body.home{
+  background: white;
+}
+
+
+a.scrollup{
+  display: none;
+}
+
+.page-container{
+  margin-top: 51px;
+}
+
+.home-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  padding: 20px;
+  background-color: #222;
+  color: white;
+  font-weight: bold;
+
+  .pull-right {
+    a {
+      padding: 7px;
+      color: white;
+
+      &:hover {
+        color: #eee;
+      }
+    }
+  }
+}
