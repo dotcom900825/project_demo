@@ -15,7 +15,7 @@ class GScholar
 
     CSV.parse(raw_data, { :col_sep => "\|"}) do |row|
       paper = { :title => row[0], :url => row[1], :num_citation => row[2], :num_versions => row[3],
-                :url_citation => row[4], :url_version => row[5], :year => row[6]}
+                :url_citation => row[4], :url_version => row[5], :year => row[6], :url_related_artile => row[7]}
       result << paper
     end
 

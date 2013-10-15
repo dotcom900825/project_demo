@@ -72,13 +72,15 @@ class Article():
     provides basic dictionary-like behavior.
     """
     def __init__(self):
-        self.attrs = {'title':         [None, 'Title',          0],
-                      'url':           [None, 'URL',            1],
-                      'num_citations': [0,    'Citations',      2],
-                      'num_versions':  [0,    'Versions',       3],
-                      'url_citations': [None, 'Citations list', 4],
-                      'url_versions':  [None, 'Versions list',  5],
-                      'year':          [None, 'Year',           6]}
+        self.attrs = {'title':         [None, 'Title',                0],
+                      'url':           [None, 'URL',                  1],
+                      'num_citations': [0,    'Citations',            2],
+                      'num_versions':  [0,    'Versions',             3],
+                      'url_citations': [None, 'Citations list',       4],
+                      'url_versions':  [None, 'Versions list',        5],
+                      'year':          [None, 'Year',                 6],
+              'url_related_articles':  [None, 'Related Article list', 7]
+                      }
 
     def __getitem__(self, key):
         if key in self.attrs:
@@ -175,6 +177,9 @@ class ScholarParser():
                     self.article['num_citations'] = \
                         self._as_int(tag.string.split()[-1])
                 self.article['url_citations'] = self._path2url(tag.get('href'))
+
+            if tag.get('href').startswith('/scholar?q=related'):
+                self.article['url_related_articles'] = self._path2url(tag.get('href'))
 
             if tag.get('href').startswith('/scholar?cluster'):
                 if hasattr(tag, 'string') and tag.string.startswith('All '):

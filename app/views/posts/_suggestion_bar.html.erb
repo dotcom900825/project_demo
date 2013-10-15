@@ -1,6 +1,21 @@
 <div class='col-md-4 suggestion-area'>
-  <h2>Suggestions</h2>
+  <div>
+    <h2>
+      Suggestions
+      <select name="search_method">
+        <option value="">Please select</option>
+        <option value="1" selected="selected">Google Scholar</option>
+        <option value="2">Google custom search</option>
+      </select>
+    </h2>
+  </div>
   <div id='resource_suggestion'>
 
+  </div>
+
+  <div>
+    <div class="input-group">
+      <input type="text" id='query_string' placeholder="Query"><input type="button" class='btn btn-primary' value='Search' id='re_query'>
+    </div>
   </div>
 </div>

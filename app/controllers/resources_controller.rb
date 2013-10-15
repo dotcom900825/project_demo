@@ -4,30 +4,48 @@ class ResourcesController < ApplicationController
   def search
     @articles = Article.all
 
+    search_method = params[:m]
+    puts search_method
     query = params[:q].split.last(5).join(" ")
 
-    @articles = GScholar.search(query)
-
-    respond_to do |format|
-      format.json {
-        render json: {
-          status: 'success',
-          value: @articles,
-          html: render_to_string(:partial=>'resources/article', :formats=>:html, :locals=>{:articles=>@articles})
+    if search_method == '1'
+      @articles = GScholar.search(query)
+      respond_to do |format|
+        format.json {
+          render json: {
+            status: 'success',
+            html: render_to_string(:partial=>'resources/article', :formats=>:html, :locals=>{:articles=>@articles})
+          }
         }
-      }
+      end
+      return
+
+    elsif search_method == '2'
+      @articles = GoogleCustomSearch.search(query)
+      respond_to do |format|
+        format.json {
+          render json: {
+            status: 'success',
+            html: render_to_string(:partial=>'resources/custom_search', :formats=>:html, :locals=>{:articles=>@articles})
+          }
+        }
+      end
+      return
     end
+
   end
 
   def lan_detect
     query = params[:q]
     language = check_language(query)
 
+    city = request.location.city
+
     respond_to do |format|
       format.json {
         render json: {
           lan: language,
-          loc: "#{request.location.country} / #{request.location.city}"
+          loc: city
         }
       }
     end

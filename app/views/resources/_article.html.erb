@@ -1,5 +1,5 @@
 <% articles.each do |article|%>
   <div>
-    <span><%= article[:title]%></span>
+    <span><%= article[:title]%></span> <%= link_to 'related articles', article[:url_related_artile]%>
   </div>
 <% end %>
