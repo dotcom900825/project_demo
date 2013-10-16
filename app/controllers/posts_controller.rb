@@ -1,5 +1,4 @@
 class PostsController < ApplicationController
-  before_filter :require_login, except: [:index, :show, :admin]
   layout 'post'
   def index
     @posts = Post.published.newest.page(params[:page]).per(8)
