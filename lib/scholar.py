@@ -64,8 +64,7 @@ import sys
 import re
 import urllib
 import urllib2
-from BeautifulSoup import BeautifulSoup
-
+from bs4 import BeautifulSoup
 class Article():
     """
     A class representing articles listed on Google Scholar.  The class
