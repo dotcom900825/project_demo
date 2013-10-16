@@ -62,7 +62,7 @@ ProjectX::Application.configure do
   config.active_support.deprecation = :notify
 
   config.assets.precompile += %w( site_3rd_base.js site_base.js )
-  config.assets.precompile += %w( site_3rd_base.css site_base.css site_total.css )
+  config.assets.precompile += %w( site_3rd_base.css site_base.css site_total.css style-ie.css )
 
 
   # Log the query plan for queries taking more than this (works
