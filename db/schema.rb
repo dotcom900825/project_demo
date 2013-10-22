@@ -11,7 +11,38 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131007042809) do
+ActiveRecord::Schema.define(:version => 20131021022347) do
+
+  create_table "FundingOppSynopsis", :force => true do |t|
+    t.string   "PostDate"
+    t.string   "UserID"
+    t.string   "Password"
+    t.string   "FundingInstrumentType"
+    t.string   "FundingActivityCategory"
+    t.text     "OtherCategoryExplanation"
+    t.integer  "NumberOfAwards"
+    t.integer  "EstimatedFunding"
+    t.integer  "AwardCeiling"
+    t.integer  "AwardFloor"
+    t.string   "AgencyMailingAddress"
+    t.string   "FundingOppTitle"
+    t.string   "FundingOppNumber"
+    t.string   "ApplicationsDueDate"
+    t.string   "ApplicationsDueDateExplanation"
+    t.string   "ArchiveDate"
+    t.string   "Location"
+    t.string   "Office"
+    t.string   "Agency"
+    t.text     "FundingOppDescription"
+    t.float    "CFDANumber"
+    t.integer  "EligibilityCategory"
+    t.text     "AdditionalEligibilityInfo"
+    t.string   "CostSharing"
+    t.string   "ObtainFundingOppText"
+    t.string   "AgencyContact"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
 
   create_table "articles", :force => true do |t|
     t.string "name"
