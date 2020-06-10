@@ -54,7 +54,7 @@ GEM
     execjs (2.0.2)
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
-    geocoder (1.1.8)
+    geocoder (1.6.1)
     hike (1.2.3)
     http_accept_language (1.0.2)
     httpauth (0.2.0)
@@ -72,6 +72,7 @@ GEM
     mime-types (1.25)
     multi_json (1.8.0)
     multipart-post (1.2.0)
+    mysql2 (0.5.3)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -151,6 +152,7 @@ DEPENDENCIES
   geocoder
   http_accept_language (~> 1.0.2)
   jquery-rails
+  mysql2
   paperclip
   rails (= 3.2.14)
   rest-client
