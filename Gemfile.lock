@@ -49,6 +49,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.3)
+    concurrent-ruby (1.1.10)
     detect_language (1.0.3)
     erubis (2.7.0)
     execjs (2.0.2)
@@ -58,7 +59,8 @@ GEM
     hike (1.2.3)
     http_accept_language (1.0.2)
     httpauth (0.2.0)
-    i18n (0.6.5)
+    i18n (0.9.5)
+      concurrent-ruby (~> 1.0)
     journey (1.0.4)
     jquery-rails (3.0.4)
       railties (>= 3.0, < 5.0)
@@ -72,6 +74,7 @@ GEM
     mime-types (1.25)
     multi_json (1.8.0)
     multipart-post (1.2.0)
+    mysql2 (0.5.4)
     oauth (0.4.7)
     oauth2 (0.8.1)
       faraday (~> 0.8)
@@ -151,6 +154,7 @@ DEPENDENCIES
   geocoder
   http_accept_language (~> 1.0.2)
   jquery-rails
+  mysql2
   paperclip
   rails (= 3.2.14)
   rest-client
